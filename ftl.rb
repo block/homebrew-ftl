@@ -5,12 +5,12 @@
 class Ftl < Formula
   desc "FTL is a platform for building distributed systems that are safe to operate, easy to reason about, and fast to iterate and develop on."
   homepage "https://github.com/block/ftl"
-  version "0.480.1"
+  version "0.480.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/block/ftl/releases/download/v0.480.1/ftl-0.480.1.darwin-amd64.tar.gz"
-      sha256 "7c7b07e7e401af6c85496b77a2fe9307eac5af5b6134e42e1137ac7e40e55451"
+      url "https://github.com/block/ftl/releases/download/v0.480.2/ftl-0.480.2.darwin-amd64.tar.gz"
+      sha256 "4bd68702f3368bf3a9278deb8e6ad3c9207d0435359ba1c89612e9664d0097b3"
 
       def install
         bin.install "ftl"
@@ -21,8 +21,8 @@ class Ftl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/block/ftl/releases/download/v0.480.1/ftl-0.480.1.darwin-arm64.tar.gz"
-      sha256 "13c07ea0e1820bec671ed99817ef64102596dcbe9c00906af9663d08221a3200"
+      url "https://github.com/block/ftl/releases/download/v0.480.2/ftl-0.480.2.darwin-arm64.tar.gz"
+      sha256 "bf2072393a2c5087f4ed465fa6ac81f6765aebfd8423a709938e08c6e230808f"
 
       def install
         bin.install "ftl"
@@ -37,8 +37,8 @@ class Ftl < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/block/ftl/releases/download/v0.480.1/ftl-0.480.1.linux-amd64.tar.gz"
-        sha256 "fdb62da271f588382fee7f5f5215552007b2522ac18a3498c4b787aef83cb2f8"
+        url "https://github.com/block/ftl/releases/download/v0.480.2/ftl-0.480.2.linux-amd64.tar.gz"
+        sha256 "c2d9f770532c1d7e621716427187f9ac8f3cb625c050d1dce183174904620970"
 
         def install
           bin.install "ftl"
@@ -51,8 +51,8 @@ class Ftl < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/block/ftl/releases/download/v0.480.1/ftl-0.480.1.linux-arm64.tar.gz"
-        sha256 "2ba2048e6d94888daed1ed8a61c78cd5c493680a355382c016ee4d643118b2cc"
+        url "https://github.com/block/ftl/releases/download/v0.480.2/ftl-0.480.2.linux-arm64.tar.gz"
+        sha256 "ef825d6ec5867ee1b6a6516deeeb5a1b5661efe687597c708a9a3506bd2a4f70"
 
         def install
           bin.install "ftl"
