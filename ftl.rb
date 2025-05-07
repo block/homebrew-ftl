@@ -5,12 +5,12 @@
 class Ftl < Formula
   desc "FTL is a platform for building distributed systems that are safe to operate, easy to reason about, and fast to iterate and develop on."
   homepage "https://github.com/block/ftl"
-  version "0.485.0"
+  version "0.486.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/block/ftl/releases/download/v0.485.0/ftl-0.485.0.darwin-amd64.tar.gz"
-      sha256 "2db5155ffc0fa8f24f62988e4abc605b01fdb368eb1644fd3781ed42f8e20281"
+      url "https://github.com/block/ftl/releases/download/v0.486.0/ftl-0.486.0.darwin-amd64.tar.gz"
+      sha256 "88a61b1893ac370c4cd91220fe57ee3e1a49876986d95544475ea011e4b881d3"
 
       def install
         bin.install "ftl"
@@ -21,8 +21,8 @@ class Ftl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/block/ftl/releases/download/v0.485.0/ftl-0.485.0.darwin-arm64.tar.gz"
-      sha256 "4210c05fca6001f7a8a8ad95590e8430e7c431b4c87c0170db6d2ee759e41a77"
+      url "https://github.com/block/ftl/releases/download/v0.486.0/ftl-0.486.0.darwin-arm64.tar.gz"
+      sha256 "a37f3aa08c0473cf067525be0c0beb12f19f66e9c4897e696e2eb9b75ebe57f4"
 
       def install
         bin.install "ftl"
@@ -35,32 +35,26 @@ class Ftl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/block/ftl/releases/download/v0.485.0/ftl-0.485.0.linux-amd64.tar.gz"
-        sha256 "cd6bd41eb29db787ecfd2bf4e82d2e35a08b64cccfcba7a17cf7b2f429ee8ae7"
-
-        def install
-          bin.install "ftl"
-          bin.install "ftl-language-go"
-          bin.install "ftl-language-java"
-          bin.install "ftl-language-kotlin"
-          bin.install "ftl-sqlc"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/block/ftl/releases/download/v0.486.0/ftl-0.486.0.linux-amd64.tar.gz"
+      sha256 "9642deef048724644ee1028cd6daf7c6340ffd5ceee55656217a34b709425e16"
+      def install
+        bin.install "ftl"
+        bin.install "ftl-language-go"
+        bin.install "ftl-language-java"
+        bin.install "ftl-language-kotlin"
+        bin.install "ftl-sqlc"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/block/ftl/releases/download/v0.485.0/ftl-0.485.0.linux-arm64.tar.gz"
-        sha256 "89481d5ce9babbd400eb95c4e62d5efffd783b4dd8c0d2a226d9764d22773dbf"
-
-        def install
-          bin.install "ftl"
-          bin.install "ftl-language-go"
-          bin.install "ftl-language-java"
-          bin.install "ftl-language-kotlin"
-          bin.install "ftl-sqlc"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/block/ftl/releases/download/v0.486.0/ftl-0.486.0.linux-arm64.tar.gz"
+      sha256 "be3f0ea8a1c2bbdfa5c6562935585220c5a74a92cf7107d79c3957e1eaa2d4f8"
+      def install
+        bin.install "ftl"
+        bin.install "ftl-language-go"
+        bin.install "ftl-language-java"
+        bin.install "ftl-language-kotlin"
+        bin.install "ftl-sqlc"
       end
     end
   end
